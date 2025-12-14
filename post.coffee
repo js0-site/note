@@ -1,5 +1,37 @@
 #!/usr/bin/env coffee
 
+fetch("https://annota-api.corust.ai/v1/attachments", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "zh-CN,zh;q=0.9,en;q=0.8",
+    "authorization": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Inc5aHR3T3JoNHhqYnFDWmdaQUxDQWpXWUFWUGk2TFJpIn0.eyJpYXQiOjE3NjU0MjgxODgsImlkIjoiZmZvOVhIZGNNbGNMTEM2cHF0cXpjamJiNFFOaUxTUW8iLCJzdWIiOiJmZm85WEhkY01sY0xMQzZwcXRxemNqYmI0UU5pTFNRbyIsImV4cCI6MTc2NTQzMTc4OCwiaXNzIjoiQW5ub3RhIiwiYXVkIjoiQW5ub3RhIn0.Qqv9aG5EKg9egWcMmibX3ifE_5nyCfqraDa41xC9V7x8bvcwbcdkTpXYSb0acWEXye6JIOcjBVu1B54tckbY_9jcAFr0apqwRM6MWDQHQTARLWO-IaLbeyq-tf2IDQzoSo6CP-jwxWFr8aeODw8uvk2K18CORfW0wHT7ry041dlcdWyw_3iuB1QAApgw9-JJ7jHe31osLDWrp5rWbSFygyayDNmct3k5ufQiJOheIayH8bgXS7zS_X1MQAmp5zYF9ukHWMP93g2wDjjqzWwS13W8vBy5RIdF9AmOyuOoUWReYoGf1Yi0sOu9L8aGDwbcowyfgv_bO7GvuVCj9e9WBA",
+    "content-type": "multipart/form-data; boundary=----WebKitFormBoundarySB7kdBeOm7CGSXQE",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"macOS\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site",
+    "Referer": "https://annota.corust.ai/"
+  },
+  "body": "------WebKitFormBoundarySB7kdBeOm7CGSXQE\r\nContent-Disposition: form-data; name=\"attachments\"; filename=\"demo.tar.gz\"\r\nContent-Type: application/x-gzip\r\n\r\n\r\n------WebKitFormBoundarySB7kdBeOm7CGSXQE--\r\n",
+  "method": "POST"
+});
+
+[
+  {
+    "id": "019b0bbf-1fc3-7b71-9ef7-5ba949ec5b90",
+    "annotation_id": null,
+    "filename": "019b0bbf-1fc3-7b71-9ef7-5b93221db2f2.gz",
+    "original_filename": "demo.tar.gz",
+    "file_size": 5942,
+    "mime_type": "application/x-gzip",
+    "is_temporary": true,
+    "created_at": "2025-12-11T04:50:33.539485Z"
+  }
+]
+
 fetch "https://annota-api.corust.ai/v1/annotations",
   method: "POST"
   headers:

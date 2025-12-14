@@ -1,0 +1,36 @@
+type: object
+properties:
+  问题摘要:
+    type: string
+    minLength: 5
+    description: "用一句话概括您的问题。标题至少需要 5 个字符。"
+  行业描述:
+    type: string
+    description: "用一句话描述此问题或您的行业。您可以更具体。"
+  问题背景:
+    type: string
+    description: "请详细记录此问题发生的场景（背景），以帮助我们评估此问题的价值。请务必删除任何敏感信息。"
+  问题描述:
+    type: string
+    description: "详细描述您遇到的问题。可以包括：您想实现什么功能、遇到了什么困难、最让您困惑的是什么等。"
+  问题代码或详细描述:
+    type: string
+    description: "导致问题的最小代码示例或 Rust playground 链接。代码和注释必须使用英文。"
+  错误信息:
+    type: string
+    description: "如果有错误信息，请完整粘贴。"
+  问题解决过程:
+    type: string
+    description: "请详细描述您是如何解决此问题的，以及尝试过哪些中间解决方案。"
+  提示词:
+    type: string
+    description: "能代表正确解决方案的代码生成提示词"
+required:
+  - 问题摘要
+  - 行业描述
+  - 问题背景
+  - 问题描述
+  - 问题代码或详细描述
+  - 错误信息
+  - 问题解决过程
+  - 提示词
